@@ -28,6 +28,7 @@ def find_best_model_with_params(X_train, y_train, X_test, y_test):
         },
     }
 
+
     def evaluate_model(hyperopt_params):
         params = hyperopt_params
         if 'max_depth' in params: params['max_depth']=int(params['max_depth'])   # hyperopt supplies values as float but must be int
@@ -94,8 +95,7 @@ def main():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
     trained_model = find_best_model_with_params(X_train, y_train, X_test, y_test)
-    save_model(trained_model, output_path)
-    # We will push this model to S3 and also copy in the root folder for Dockerfile to pick
+    save_model(trained_model, output_path) # We will push this model to S3 and also copy in the root folder for Dockerfile to pick
 
 
 if __name__ == "__main__":

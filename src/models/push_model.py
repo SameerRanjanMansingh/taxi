@@ -16,6 +16,7 @@ def upload_to_s3(local_file_path, bucket_name, s3_file_path):
         print("Credentials not available.")
 
 # Example usage
+        
 local_model_path = 'models/model.joblib'
 s3_bucket_name = 'nyc-taxi-trips'
 s3_file_path = 'models/model.joblib' 

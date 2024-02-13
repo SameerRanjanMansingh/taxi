@@ -36,6 +36,7 @@ def create_dist_features(df):
     df.loc[:, 'distance_dummy_manhattan'] = dummy_manhattan_distance(df['pickup_latitude'].values, df['pickup_longitude'].values, df['dropoff_latitude'].values, df['dropoff_longitude'].values)
     df.loc[:, 'direction'] = bearing_array(df['pickup_latitude'].values, df['pickup_longitude'].values, df['dropoff_latitude'].values, df['dropoff_longitude'].values)
     
+    
 
 def create_datetime_features(df):
     df.loc[:, 'pickup_weekday'] = df['pickup_datetime'].dt.weekday
