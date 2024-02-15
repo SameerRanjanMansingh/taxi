@@ -79,7 +79,8 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
           IMAGE_TAG: latest
         run: |
-          docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "Pulling image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          docker pull "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
       
       - name: Delete Previous Container
         run: |
