@@ -94,3 +94,10 @@ target/
 # AWS files
 .aws/*
 data/
+
+
+
+seldon_deployment.yaml
+seldon_iris.yaml
+seldon-gateway.yaml
+seldon-podmonitor.yaml
